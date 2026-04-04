@@ -1,6 +1,30 @@
-[
-  { "key": "mrr",        "label": "MRR",          "value": 84200, "unit": "$", "change": 6.2,  "period": "2026-04" },
-  { "key": "dau",        "label": "Daily Active",  "value": 1340,  "unit": "",  "change": -1.8, "period": "2026-04" },
-  { "key": "churn_rate", "label": "Churn Rate",    "value": 2.1,   "unit": "%", "change": -0.3, "period": "2026-04" },
-  { "key": "nps",        "label": "NPS",           "value": 61,    "unit": "",  "change": 4.0,  "period": "2026-04" }
-]
+{
+  "snapshot": {
+    "mrr":         { "label": "MRR",          "value": 124800,  "prev": 111200,  "format": "currency", "trend": "up" },
+    "arr":         { "label": "ARR",          "value": 1497600, "prev": 1334400, "format": "currency", "trend": "up" },
+    "activeUsers": { "label": "Active Users", "value": 3241,    "prev": 3002,    "format": "number",   "trend": "up" },
+    "churn":       { "label": "Churn Rate",   "value": 1.8,     "prev": 2.1,     "format": "percent",  "trend": "down" },
+    "nrr":         { "label": "NRR",          "value": 118,     "prev": 114,     "format": "percent",  "trend": "up" },
+    "arpu":        { "label": "ARPU",         "value": 38.50,   "prev": 37.05,   "format": "currency", "trend": "up" }
+  },
+  "monthly": [
+    { "month": "Apr '24", "mrr": 89200,  "newMrr": 6100, "churnedMrr": 1800, "users": 2501 },
+    { "month": "May '24", "mrr": 93500,  "newMrr": 6400, "churnedMrr": 2100, "users": 2598 },
+    { "month": "Jun '24", "mrr": 97800,  "newMrr": 6200, "churnedMrr": 1900, "users": 2701 },
+    { "month": "Jul '24", "mrr": 101200, "newMrr": 5800, "churnedMrr": 2400, "users": 2789 },
+    { "month": "Aug '24", "mrr": 104900, "newMrr": 6300, "churnedMrr": 1600, "users": 2880 },
+    { "month": "Sep '24", "mrr": 108400, "newMrr": 6100, "churnedMrr": 2600, "users": 2954 },
+    { "month": "Oct '24", "mrr": 111200, "newMrr": 5900, "churnedMrr": 3100, "users": 3002 },
+    { "month": "Nov '24", "mrr": 113800, "newMrr": 7200, "churnedMrr": 4600, "users": 3041 },
+    { "month": "Dec '24", "mrr": 116500, "newMrr": 8400, "churnedMrr": 5700, "users": 3089 },
+    { "month": "Jan '25", "mrr": 118900, "newMrr": 7100, "churnedMrr": 4700, "users": 3124 },
+    { "month": "Feb '25", "mrr": 121600, "newMrr": 6800, "churnedMrr": 4100, "users": 3182 },
+    { "month": "Mar '25", "mrr": 124800, "newMrr": 8200, "churnedMrr": 5000, "users": 3241 }
+  ],
+  "alerts": [
+    { "id": "a1", "type": "milestone", "message": "MRR crossed $120k for the first time",         "date": "2025-02-14", "read": false },
+    { "id": "a2", "type": "positive",  "message": "Churn rate dropped below 2% — lowest in 18 months", "date": "2025-03-01", "read": false },
+    { "id": "a3", "type": "info",      "message": "3 enterprise accounts expanded this quarter",  "date": "2025-03-18", "read": true },
+    { "id": "a4", "type": "warning",   "message": "Avg session length down 14% vs last month",   "date": "2025-03-28", "read": true }
+  ]
+}

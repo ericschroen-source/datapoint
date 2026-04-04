@@ -1,16 +1,10 @@
 {
-  "id": "c-001",
-  "name": "Meridian Analytics",
-  "slug": "meridian",
-  "plan": "pro",
-  "industry": "SaaS",
-  "size": "51-200",
-  "logo_url": null,
-  "billing_email": "billing@meridian.io",
-  "created_at": "2025-03-01",
-  "settings": {
-    "timezone": "America/Denver",
-    "fiscal_year_start": "January",
-    "date_format": "MM/DD/YYYY"
-  }
+  "id": "co-meridian",
+  "name": "Meridian Labs",
+  "domain": "meridian.io",
+  "plan": "enterprise",
+  "industry": "B2B SaaS",
+  "founded": 2019,
+  "fiscalYearStart": "January",
+  "logo": "ML"
 }

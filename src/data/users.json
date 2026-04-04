@@ -1,5 +1,8 @@
 [
-  { "id": "u-001", "company_id": "c-001", "email": "eric@meridian.io", "password": "demo123", "full_name": "Eric Johnson", "role": "admin", "avatar_url": null, "last_active": "2026-04-03" },
-  { "id": "u-002", "company_id": "c-001", "email": "sara@meridian.io", "password": "demo123", "full_name": "Sara Kim", "role": "analyst", "avatar_url": null, "last_active": "2026-04-01" },
-  { "id": "u-003", "company_id": "c-001", "email": "james@meridian.io", "password": "demo123", "full_name": "James Okafor", "role": "viewer", "avatar_url": null, "last_active": "2026-03-28" }
+  { "id": "u1", "name": "Sarah Chen",   "email": "sarah@meridian.io",  "role": "owner",  "department": "Executive",   "initials": "SC", "color": "bg-violet-100 text-violet-700",  "lastActive": "2025-04-03", "password": "demo" },
+  { "id": "u2", "name": "James Okafor", "email": "james@meridian.io",  "role": "admin",  "department": "Finance",     "initials": "JO", "color": "bg-sky-100 text-sky-700",        "lastActive": "2025-04-03" },
+  { "id": "u3", "name": "Priya Nair",   "email": "priya@meridian.io",  "role": "admin",  "department": "Product",     "initials": "PN", "color": "bg-emerald-100 text-emerald-700", "lastActive": "2025-04-02" },
+  { "id": "u4", "name": "Marcus Webb",  "email": "marcus@meridian.io", "role": "viewer", "department": "Sales",       "initials": "MW", "color": "bg-amber-100 text-amber-700",    "lastActive": "2025-04-01" },
+  { "id": "u5", "name": "Lena Fischer", "email": "lena@meridian.io",   "role": "viewer", "department": "Engineering", "initials": "LF", "color": "bg-rose-100 text-rose-700",      "lastActive": "2025-03-29" },
+  { "id": "u6", "name": "Tom Reyes",    "email": "tom@meridian.io",    "role": "viewer", "department": "Marketing",   "initials": "TR", "color": "bg-teal-100 text-teal-700",      "lastActive": "2025-03-28" }
 ]

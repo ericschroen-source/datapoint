@@ -1,10 +1,6 @@
 [
-  {
-    "id": "d-001",
-    "name": "Overview",
-    "slug": "overview",
-    "is_default": true,
-    "created_by": "u-001",
-    "widgets": ["mrr", "dau", "churn_rate", "nps"]
-  }
+  { "id": "d1", "name": "Executive Overview", "default": true,  "owner": "u1", "lastViewed": "2025-04-03" },
+  { "id": "d2", "name": "Revenue Deep Dive",  "default": false, "owner": "u2", "lastViewed": "2025-04-02" },
+  { "id": "d3", "name": "Product Health",     "default": false, "owner": "u3", "lastViewed": "2025-04-01" },
+  { "id": "d4", "name": "Q1 Board Report",    "default": false, "owner": "u1", "lastViewed": "2025-03-28" }
 ]

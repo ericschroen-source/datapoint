@@ -1,7 +1,8 @@
-{
-  "plans": {
-    "free":       { "seats": 3,  "ai_insights": false, "csv_export": false, "custom_dashboards": false, "api_access": false },
-    "pro":        { "seats": 15, "ai_insights": true,  "csv_export": true,  "custom_dashboards": false, "api_access": false },
-    "enterprise": { "seats": -1, "ai_insights": true,  "csv_export": true,  "custom_dashboards": true,  "api_access": true }
-  }
-}
+[
+  { "id": "stripe",     "name": "Stripe",     "category": "Revenue",   "connected": true,  "lastSync": "2025-04-03T08:12:00Z" },
+  { "id": "mixpanel",   "name": "Mixpanel",   "category": "Analytics", "connected": true,  "lastSync": "2025-04-03T07:45:00Z" },
+  { "id": "salesforce", "name": "Salesforce", "category": "CRM",       "connected": true,  "lastSync": "2025-04-03T06:00:00Z" },
+  { "id": "slack",      "name": "Slack",      "category": "Alerts",    "connected": true,  "lastSync": "2025-04-03T08:00:00Z" },
+  { "id": "postgres",   "name": "PostgreSQL", "category": "Database",  "connected": false, "lastSync": null },
+  { "id": "hubspot",    "name": "HubSpot",    "category": "CRM",       "connected": false, "lastSync": null }
+]
