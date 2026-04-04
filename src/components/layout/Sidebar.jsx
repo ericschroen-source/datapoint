@@ -66,10 +66,10 @@ export default function Sidebar() {
   }
 
   return (
-    <aside className="w-56 bg-zinc-950 flex flex-col h-screen sticky top-0 shrink-0">
+    <aside className="w-56 bg-nav flex flex-col h-screen sticky top-0 shrink-0">
       {/* Logo */}
       <div className="px-5 py-5 flex items-center gap-2.5 border-b border-zinc-800">
-        <span className="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center shrink-0">
+        <span className="w-7 h-7 rounded-lg bg-brand flex items-center justify-center shrink-0">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <circle cx="4" cy="10" r="2" fill="white"/>
             <circle cx="7" cy="6" r="2" fill="white" opacity="0.7"/>
@@ -90,7 +90,7 @@ export default function Sidebar() {
               `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors ${
                 isActive
                   ? 'bg-zinc-800 text-white'
-                  : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
+                  : 'text-zinc-400 hover:text-white hover:bg-nav-active/50'
               }`
             }
           >

@@ -26,7 +26,7 @@ export default function Team() {
   if (loading) {
     return (
       <div className="flex-1 flex items-center justify-center">
-        <div className="w-6 h-6 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+        <div className="w-6 h-6 border-2 border-brand border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
@@ -45,12 +45,12 @@ export default function Team() {
               placeholder="Search by name, email, or department…"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="flex-1 max-w-sm h-9 px-3 text-sm border border-zinc-200 rounded-lg bg-white text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              className="flex-1 max-w-sm h-9 px-3 text-sm border border-zinc-200 rounded-lg bg-white text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
             />
             {currentUser?.role === 'owner' || currentUser?.role === 'admin' ? (
               <Button
                 size="sm"
-                className="bg-indigo-600 hover:bg-indigo-700 text-white h-9 px-4"
+                className="bg-brand hover:bg-brand-hover text-white h-9 px-4"
                 onClick={() => setInviteOpen(true)}
               >
                 + Invite member
@@ -127,12 +127,12 @@ export default function Team() {
                 <input
                   type="email"
                   placeholder="colleague@company.com"
-                  className="w-full h-10 px-3 text-sm border border-zinc-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full h-10 px-3 text-sm border border-zinc-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
                 />
               </div>
               <div>
                 <label className="block text-xs font-medium text-zinc-700 mb-1.5">Role</label>
-                <select className="w-full h-10 px-3 text-sm border border-zinc-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+                <select className="w-full h-10 px-3 text-sm border border-zinc-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand bg-white">
                   <option value="viewer">Viewer</option>
                   <option value="admin">Admin</option>
                 </select>
@@ -147,7 +147,7 @@ export default function Team() {
                 Cancel
               </Button>
               <Button
-                className="flex-1 h-10 bg-indigo-600 hover:bg-indigo-700 text-white"
+                className="flex-1 h-10 bg-brand hover:bg-brand-hover text-white"
                 onClick={() => setInviteOpen(false)}
               >
                 Send invite

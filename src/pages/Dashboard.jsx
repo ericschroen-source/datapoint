@@ -31,7 +31,7 @@ function MetricCard({ metric }) {
       </p>
       <div className="flex items-center gap-1.5">
         <span className={`inline-flex items-center gap-0.5 text-xs font-semibold px-2 py-0.5 rounded-full ${
-          isPositive ? 'bg-emerald-50 text-emerald-600' : 'bg-rose-50 text-rose-600'
+          isPositive ? 'bg-positive-subtle text-positive' : 'bg-negative-subtle text-negative'
         }`}>
           {isPositive ? '↑' : '↓'} {Math.abs(change)}%
         </span>
@@ -42,10 +42,10 @@ function MetricCard({ metric }) {
 }
 
 const alertStyles = {
-  milestone: { bg: 'bg-indigo-50', text: 'text-indigo-700', dot: 'bg-indigo-500', icon: '★' },
-  positive:  { bg: 'bg-emerald-50', text: 'text-emerald-700', dot: 'bg-emerald-500', icon: '↑' },
+  milestone: { bg: 'bg-brand-subtle', text: 'text-brand', dot: 'bg-brand-subtle0', icon: '★' },
+  positive:  { bg: 'bg-positive-subtle', text: 'text-positive', dot: 'bg-positive-subtle0', icon: '↑' },
   info:      { bg: 'bg-zinc-50', text: 'text-zinc-600', dot: 'bg-zinc-400', icon: 'i' },
-  warning:   { bg: 'bg-amber-50', text: 'text-amber-700', dot: 'bg-amber-500', icon: '!' },
+  warning:   { bg: 'bg-warning-subtle', text: 'text-warning', dot: 'bg-warning-subtle0', icon: '!' },
 }
 
 export default function Dashboard() {
@@ -61,7 +61,7 @@ export default function Dashboard() {
     return (
       <div className="flex-1 flex items-center justify-center">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-6 h-6 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+          <div className="w-6 h-6 border-2 border-brand border-t-transparent rounded-full animate-spin" />
           <p className="text-sm text-zinc-400">Loading your data…</p>
         </div>
       </div>
@@ -89,12 +89,12 @@ export default function Dashboard() {
               {greeting}, {firstName}.
             </h2>
             <p className="text-sm text-zinc-400 leading-relaxed max-w-xl">
-              Revenue is up <span className="text-emerald-600 font-medium">12.3%</span> month-over-month and churn just hit its lowest point in 18 months.
-              Net Revenue Retention is at <span className="text-indigo-600 font-medium">118%</span> — expansion is outpacing churn.
+              Revenue is up <span className="text-positive font-medium">12.3%</span> month-over-month and churn just hit its lowest point in 18 months.
+              Net Revenue Retention is at <span className="text-brand font-medium">118%</span> — expansion is outpacing churn.
             </p>
           </div>
           {unreadAlerts.length > 0 && (
-            <span className="shrink-0 text-xs font-semibold bg-indigo-50 text-indigo-600 border border-indigo-100 rounded-full px-3 py-1">
+            <span className="shrink-0 text-xs font-semibold bg-brand-subtle text-brand border border-brand-subtle rounded-full px-3 py-1">
               {unreadAlerts.length} new alert{unreadAlerts.length > 1 ? 's' : ''}
             </span>
           )}
@@ -145,7 +145,7 @@ export default function Dashboard() {
               {[...unreadAlerts, ...readAlerts].map((alert) => {
                 const style = alertStyles[alert.type]
                 return (
-                  <div key={alert.id} className={`rounded-lg p-3 ${style.bg} ${!alert.read ? 'ring-1 ring-inset ring-indigo-100' : ''}`}>
+                  <div key={alert.id} className={`rounded-lg p-3 ${style.bg} ${!alert.read ? 'ring-1 ring-inset ring-brand-subtle' : ''}`}>
                     <div className="flex items-start gap-2.5">
                       <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-0.5 ${style.dot}`}>
                         {style.icon}
@@ -183,10 +183,10 @@ export default function Dashboard() {
                     <tr key={i}>
                       <td className="py-3 pr-6 text-sm font-medium text-zinc-900">{row.month}</td>
                       <td className="py-3 pr-6 text-sm text-zinc-700">${(row.mrr / 1000).toFixed(1)}k</td>
-                      <td className="py-3 pr-6 text-sm text-emerald-600">+${(row.newMrr / 1000).toFixed(1)}k</td>
-                      <td className="py-3 pr-6 text-sm text-rose-500">-${(row.churnedMrr / 1000).toFixed(1)}k</td>
+                      <td className="py-3 pr-6 text-sm text-positive">+${(row.newMrr / 1000).toFixed(1)}k</td>
+                      <td className="py-3 pr-6 text-sm text-negative">-${(row.churnedMrr / 1000).toFixed(1)}k</td>
                       <td className="py-3 pr-6">
-                        <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${net > 0 ? 'bg-emerald-50 text-emerald-600' : 'bg-rose-50 text-rose-600'}`}>
+                        <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${net > 0 ? 'bg-positive-subtle text-positive' : 'bg-negative-subtle text-negative'}`}>
                           {net > 0 ? '+' : ''}${(net / 1000).toFixed(1)}k
                         </span>
                       </td>

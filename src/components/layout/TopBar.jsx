@@ -26,7 +26,7 @@ export default function TopBar({ title, subtitle }) {
             <path d="M7 14a2 2 0 004 0" stroke="currentColor" strokeWidth="1.5"/>
           </svg>
           {unread > 0 && (
-            <span className="absolute -top-1 -right-1 w-4 h-4 bg-indigo-600 text-white text-[9px] font-bold rounded-full flex items-center justify-center">
+            <span className="absolute -top-1 -right-1 w-4 h-4 bg-brand text-white text-[9px] font-bold rounded-full flex items-center justify-center">
               {unread}
             </span>
           )}

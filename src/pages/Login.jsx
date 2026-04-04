@@ -21,9 +21,9 @@ export default function Login() {
   return (
     <div className="min-h-screen flex">
       {/* Left panel */}
-      <div className="hidden lg:flex lg:w-1/2 bg-zinc-950 flex-col justify-between p-12">
+      <div className="hidden lg:flex lg:w-1/2 bg-nav flex-col justify-between p-12">
         <div className="flex items-center gap-2.5">
-          <span className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center">
+          <span className="w-8 h-8 rounded-lg bg-brand flex items-center justify-center">
             <svg width="16" height="16" viewBox="0 0 14 14" fill="none">
               <circle cx="4" cy="10" r="2" fill="white"/>
               <circle cx="7" cy="6" r="2" fill="white" opacity="0.7"/>
@@ -50,7 +50,7 @@ export default function Login() {
               {[40, 45, 48, 51, 53, 56, 57, 59, 61, 63, 64, 67].map((h, i) => (
                 <div
                   key={i}
-                  className={`flex-1 rounded-sm ${i === 11 ? 'bg-indigo-500' : 'bg-zinc-700'}`}
+                  className={`flex-1 rounded-sm ${i === 11 ? 'bg-brand' : 'bg-zinc-700'}`}
                   style={{ height: `${h}%` }}
                 />
               ))}
@@ -79,7 +79,7 @@ export default function Login() {
         <div className="w-full max-w-sm">
           {/* Mobile logo */}
           <div className="flex items-center gap-2 mb-10 lg:hidden">
-            <span className="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center">
+            <span className="w-7 h-7 rounded-lg bg-brand flex items-center justify-center">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <circle cx="4" cy="10" r="2" fill="white"/>
                 <circle cx="7" cy="6" r="2" fill="white" opacity="0.7"/>
@@ -93,7 +93,7 @@ export default function Login() {
           <p className="text-sm text-zinc-400 mb-8">Sign in to your workspace</p>
 
           {error && (
-            <div className="mb-5 text-sm text-rose-600 bg-rose-50 border border-rose-200 rounded-lg px-4 py-3">
+            <div className="mb-5 text-sm text-negative bg-negative-subtle border border-negative rounded-lg px-4 py-3">
               {error}
             </div>
           )}
@@ -105,7 +105,7 @@ export default function Login() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full h-10 px-3 text-sm border border-zinc-200 rounded-lg bg-white text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
+                className="w-full h-10 px-3 text-sm border border-zinc-200 rounded-lg bg-white text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition"
                 placeholder="you@company.com"
                 required
               />
@@ -113,13 +113,13 @@ export default function Login() {
             <div>
               <div className="flex items-center justify-between mb-1.5">
                 <label className="text-xs font-medium text-zinc-700">Password</label>
-                <a href="#" className="text-xs text-indigo-600 hover:underline">Forgot password?</a>
+                <a href="#" className="text-xs text-brand hover:underline">Forgot password?</a>
               </div>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full h-10 px-3 text-sm border border-zinc-200 rounded-lg bg-white text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
+                className="w-full h-10 px-3 text-sm border border-zinc-200 rounded-lg bg-white text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition"
                 placeholder="••••••••"
                 required
               />
@@ -128,7 +128,7 @@ export default function Login() {
             <Button
               type="submit"
               disabled={loading}
-              className="w-full h-10 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium"
+              className="w-full h-10 bg-brand hover:bg-brand-hover text-white text-sm font-medium"
             >
               {loading ? 'Signing in…' : 'Sign in'}
             </Button>

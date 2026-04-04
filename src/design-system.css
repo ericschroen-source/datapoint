@@ -1,0 +1,58 @@
+/* ═══════════════════════════════════════════════════════════
+   DATAPOINT DESIGN SYSTEM
+   This is the only file you need to edit to change the UI.
+   Every color, shape, and surface in the app reads from here.
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+
+  /* ── Brand ──────────────────────────────────────────────
+     The primary color. Used for buttons, links, and focus
+     rings throughout the app. Swap these three to rebrand. */
+  --brand:        #4f46e5;   /* primary — buttons, active states */
+  --brand-hover:  #4338ca;   /* button hover */
+  --brand-subtle: #eef2ff;   /* light tint — badges, backgrounds */
+
+  /* ── Navigation ─────────────────────────────────────────
+     The sidebar background and its active/hover states. */
+  --nav:          #09090b;   /* sidebar background */
+  --nav-active:   #27272a;   /* active nav item */
+
+  /* ── Page surfaces ──────────────────────────────────────
+     The background behind cards (page) vs the cards themselves. */
+  --page:         #f4f4f5;   /* main content area background */
+
+  /* ── Semantic: Positive (green) ─────────────────────────
+     Used for revenue gains, churn improvements, success states. */
+  --positive:        #059669;  /* text and icons */
+  --positive-subtle: #ecfdf5;  /* badge and card backgrounds */
+
+  /* ── Semantic: Negative (red) ───────────────────────────
+     Used for churn, losses, errors, and danger actions. */
+  --negative:        #e11d48;  /* text and icons */
+  --negative-subtle: #fff1f2;  /* badge and card backgrounds */
+
+  /* ── Semantic: Warning (amber) ──────────────────────────
+     Used for alerts that need attention but aren't critical. */
+  --warning:        #b45309;   /* text and icons */
+  --warning-subtle: #fffbeb;   /* badge and card backgrounds */
+
+}
+
+/* ── Tailwind mapping ────────────────────────────────────────
+   Exposes every token above as a Tailwind utility class.
+   --color-brand becomes bg-brand, text-brand, border-brand, etc. */
+@theme inline {
+  --color-brand:           var(--brand);
+  --color-brand-hover:     var(--brand-hover);
+  --color-brand-subtle:    var(--brand-subtle);
+  --color-nav:             var(--nav);
+  --color-nav-active:      var(--nav-active);
+  --color-page:            var(--page);
+  --color-positive:        var(--positive);
+  --color-positive-subtle: var(--positive-subtle);
+  --color-negative:        var(--negative);
+  --color-negative-subtle: var(--negative-subtle);
+  --color-warning:         var(--warning);
+  --color-warning-subtle:  var(--warning-subtle);
+}

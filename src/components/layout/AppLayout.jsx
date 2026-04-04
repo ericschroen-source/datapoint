@@ -7,7 +7,7 @@ export default function AppLayout() {
   if (!user) return <Navigate to="/login" replace />
 
   return (
-    <div className="flex h-screen bg-zinc-50 overflow-hidden">
+    <div className="flex h-screen bg-page overflow-hidden">
       <Sidebar />
       <div className="flex-1 flex flex-col overflow-auto">
         <Outlet />

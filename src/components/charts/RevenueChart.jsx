@@ -19,17 +19,19 @@ function CustomTooltip({ active, payload, label }) {
 }
 
 export default function RevenueChart({ data, view = 'mrr' }) {
+  const brand = getComputedStyle(document.documentElement).getPropertyValue('--brand').trim() || '#4f46e5'
+
   return (
     <ResponsiveContainer width="100%" height={220}>
       <AreaChart data={data} margin={{ top: 4, right: 4, bottom: 0, left: 0 }}>
         <defs>
           <linearGradient id="mrrGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%"  stopColor="#6366f1" stopOpacity={0.15}/>
-            <stop offset="95%" stopColor="#6366f1" stopOpacity={0}/>
+            <stop offset="5%"  stopColor={brand} stopOpacity={0.15}/>
+            <stop offset="95%" stopColor={brand} stopOpacity={0}/>
           </linearGradient>
           <linearGradient id="userGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%"  stopColor="#6366f1" stopOpacity={0.15}/>
-            <stop offset="95%" stopColor="#6366f1" stopOpacity={0}/>
+            <stop offset="5%"  stopColor={brand} stopOpacity={0.15}/>
+            <stop offset="95%" stopColor={brand} stopOpacity={0}/>
           </linearGradient>
         </defs>
         <CartesianGrid strokeDasharray="3 3" stroke="#f4f4f5" vertical={false}/>
@@ -47,15 +49,15 @@ export default function RevenueChart({ data, view = 'mrr' }) {
           tickFormatter={(v) => view === 'mrr' ? `$${(v/1000).toFixed(0)}k` : v.toLocaleString()}
           width={48}
         />
-        <Tooltip content={<CustomTooltip />} cursor={{ stroke: '#6366f1', strokeWidth: 1, strokeDasharray: '4 2' }}/>
+        <Tooltip content={<CustomTooltip />} cursor={{ stroke: brand, strokeWidth: 1, strokeDasharray: '4 2' }}/>
         <Area
           type="monotone"
           dataKey={view}
-          stroke="#6366f1"
+          stroke={brand}
           strokeWidth={2}
           fill={view === 'mrr' ? 'url(#mrrGrad)' : 'url(#userGrad)'}
           dot={false}
-          activeDot={{ r: 4, fill: '#6366f1', strokeWidth: 0 }}
+          activeDot={{ r: 4, fill: brand, strokeWidth: 0 }}
         />
       </AreaChart>
     </ResponsiveContainer>

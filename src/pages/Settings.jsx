@@ -21,7 +21,7 @@ function Field({ label, value, hint }) {
       <label className="block text-xs font-medium text-zinc-700 mb-1.5">{label}</label>
       <input
         defaultValue={value}
-        className="w-full h-10 px-3 text-sm border border-zinc-200 rounded-lg bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+        className="w-full h-10 px-3 text-sm border border-zinc-200 rounded-lg bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
       />
       {hint && <p className="mt-1.5 text-xs text-zinc-400">{hint}</p>}
     </div>
@@ -40,7 +40,7 @@ export default function Settings() {
   if (loading || !company) {
     return (
       <div className="flex-1 flex items-center justify-center">
-        <div className="w-6 h-6 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+        <div className="w-6 h-6 border-2 border-brand border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
@@ -61,8 +61,8 @@ export default function Settings() {
                 onClick={handleSave}
                 className={`h-9 px-5 text-sm font-medium transition-all ${
                   saved
-                    ? 'bg-emerald-600 hover:bg-emerald-600 text-white'
-                    : 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                    ? 'bg-positive hover:bg-positive text-white'
+                    : 'bg-brand hover:bg-brand-hover text-white'
                 }`}
               >
                 {saved ? '✓ Saved' : 'Save changes'}
@@ -77,7 +77,7 @@ export default function Settings() {
               <div key={f.id} className="flex items-center justify-between py-2 border-b border-zinc-50 last:border-0">
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 rounded-lg border flex items-center justify-center text-xs font-bold ${
-                    f.connected ? 'border-emerald-200 bg-emerald-50 text-emerald-700' : 'border-zinc-200 bg-zinc-50 text-zinc-400'
+                    f.connected ? 'border-positive-subtle bg-positive-subtle text-positive' : 'border-zinc-200 bg-zinc-50 text-zinc-400'
                   }`}>
                     {f.name[0]}
                   </div>
@@ -95,8 +95,8 @@ export default function Settings() {
                   size="sm"
                   className={`h-8 px-3 text-xs ${
                     f.connected
-                      ? 'border-zinc-200 text-zinc-500 hover:border-rose-200 hover:text-rose-600'
-                      : 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                      ? 'border-zinc-200 text-zinc-500 hover:border-negative-subtle hover:text-negative'
+                      : 'bg-brand hover:bg-brand-hover text-white'
                   }`}
                 >
                   {f.connected ? 'Disconnect' : 'Connect'}
@@ -124,7 +124,7 @@ export default function Settings() {
               <p className="text-sm font-medium text-zinc-900">Delete workspace</p>
               <p className="text-xs text-zinc-400 mt-0.5">This action is permanent and cannot be undone.</p>
             </div>
-            <Button variant="outline" size="sm" className="h-9 px-4 border-rose-200 text-rose-600 hover:bg-rose-50 text-sm">
+            <Button variant="outline" size="sm" className="h-9 px-4 border-negative-subtle text-negative hover:bg-negative-subtle text-sm">
               Delete
             </Button>
           </div>
