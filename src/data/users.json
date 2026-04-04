@@ -1,0 +1,5 @@
+[
+  { "id": "u-001", "company_id": "c-001", "email": "eric@meridian.io", "password": "demo123", "full_name": "Eric Johnson", "role": "admin", "avatar_url": null, "last_active": "2026-04-03" },
+  { "id": "u-002", "company_id": "c-001", "email": "sara@meridian.io", "password": "demo123", "full_name": "Sara Kim", "role": "analyst", "avatar_url": null, "last_active": "2026-04-01" },
+  { "id": "u-003", "company_id": "c-001", "email": "james@meridian.io", "password": "demo123", "full_name": "James Okafor", "role": "viewer", "avatar_url": null, "last_active": "2026-03-28" }
+]

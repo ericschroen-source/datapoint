@@ -1,0 +1,6 @@
+[
+  { "key": "mrr",        "label": "MRR",          "value": 84200, "unit": "$", "change": 6.2,  "period": "2026-04" },
+  { "key": "dau",        "label": "Daily Active",  "value": 1340,  "unit": "",  "change": -1.8, "period": "2026-04" },
+  { "key": "churn_rate", "label": "Churn Rate",    "value": 2.1,   "unit": "%", "change": -0.3, "period": "2026-04" },
+  { "key": "nps",        "label": "NPS",           "value": 61,    "unit": "",  "change": 4.0,  "period": "2026-04" }
+]

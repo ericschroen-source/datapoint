@@ -1,0 +1,7 @@
+{
+  "plans": {
+    "free":       { "seats": 3,  "ai_insights": false, "csv_export": false, "custom_dashboards": false, "api_access": false },
+    "pro":        { "seats": 15, "ai_insights": true,  "csv_export": true,  "custom_dashboards": false, "api_access": false },
+    "enterprise": { "seats": -1, "ai_insights": true,  "csv_export": true,  "custom_dashboards": true,  "api_access": true }
+  }
+}

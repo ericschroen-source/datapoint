@@ -1,0 +1,10 @@
+[
+  {
+    "id": "d-001",
+    "name": "Overview",
+    "slug": "overview",
+    "is_default": true,
+    "created_by": "u-001",
+    "widgets": ["mrr", "dau", "churn_rate", "nps"]
+  }
+]
