@@ -9,8 +9,8 @@ const delay = (ms = 400) => new Promise((r) => setTimeout(r, ms))
 export const mockApi = {
   async login(email, password) {
     await delay()
-    const user = users.find((u) => u.email === email && u.password === password)
-    if (!user) throw new Error('Invalid email or password')
+    const user = users.find((u) => u.email === email)
+    if (!user || password !== 'demo') throw new Error('Invalid email or password')
     return user
   },
   async getCompany()  { await delay(200); return companyData },
