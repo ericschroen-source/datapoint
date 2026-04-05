@@ -1,8 +1,64 @@
 [
-  { "id": "u1", "name": "Sarah Chen",   "email": "sarah@meridian.io",  "role": "owner",  "department": "Executive",   "initials": "SC", "color": "bg-violet-100 text-violet-700",  "lastActive": "2025-04-03", "password": "demo" },
-  { "id": "u2", "name": "James Okafor", "email": "james@meridian.io",  "role": "admin",  "department": "Finance",     "initials": "JO", "color": "bg-sky-100 text-sky-700",        "lastActive": "2025-04-03" },
-  { "id": "u3", "name": "Priya Nair",   "email": "priya@meridian.io",  "role": "admin",  "department": "Product",     "initials": "PN", "color": "bg-emerald-100 text-emerald-700", "lastActive": "2025-04-02" },
-  { "id": "u4", "name": "Marcus Webb",  "email": "marcus@meridian.io", "role": "viewer", "department": "Sales",       "initials": "MW", "color": "bg-amber-100 text-amber-700",    "lastActive": "2025-04-01" },
-  { "id": "u5", "name": "Lena Fischer", "email": "lena@meridian.io",   "role": "viewer", "department": "Engineering", "initials": "LF", "color": "bg-rose-100 text-rose-700",      "lastActive": "2025-03-29" },
-  { "id": "u6", "name": "Tom Reyes",    "email": "tom@meridian.io",    "role": "viewer", "department": "Marketing",   "initials": "TR", "color": "bg-teal-100 text-teal-700",      "lastActive": "2025-03-28" }
+  {
+    "id": "u1", "name": "Sarah Chen",   "email": "sarah@meridian.io",  "role": "owner",  "department": "Executive",
+    "title": "Chief Executive Officer", "initials": "SC", "color": "bg-violet-100 text-violet-700",
+    "lastActive": "2025-04-04", "password": "demo",
+    "dashboardsViewed": 48, "reportsRun": 12, "alertsTriggered": 3,
+    "activity": [
+      { "action": "Viewed Executive Overview",    "time": "Today, 8:14am" },
+      { "action": "Generated Q1 Board Report",    "time": "Today, 8:02am" },
+      { "action": "Updated alert threshold",      "time": "Yesterday, 5:31pm" },
+      { "action": "Shared Revenue Deep Dive",     "time": "Yesterday, 2:18pm" }
+    ]
+  },
+  {
+    "id": "u2", "name": "James Okafor", "email": "james@meridian.io",  "role": "admin",  "department": "Finance",
+    "title": "VP of Finance", "initials": "JO", "color": "bg-sky-100 text-sky-700",
+    "lastActive": "2025-04-04",
+    "dashboardsViewed": 31, "reportsRun": 19, "alertsTriggered": 1,
+    "activity": [
+      { "action": "Ran Revenue Deep Dive report", "time": "Today, 9:45am" },
+      { "action": "Viewed MRR waterfall",         "time": "Today, 9:30am" },
+      { "action": "Exported segment data",        "time": "Yesterday, 4:00pm" }
+    ]
+  },
+  {
+    "id": "u3", "name": "Priya Nair",   "email": "priya@meridian.io",  "role": "admin",  "department": "Product",
+    "title": "VP of Product", "initials": "PN", "color": "bg-emerald-100 text-emerald-700",
+    "lastActive": "2025-04-03",
+    "dashboardsViewed": 22, "reportsRun": 8, "alertsTriggered": 2,
+    "activity": [
+      { "action": "Viewed Product Health dashboard", "time": "Yesterday, 3:15pm" },
+      { "action": "Updated Product Health Report",   "time": "Yesterday, 2:40pm" }
+    ]
+  },
+  {
+    "id": "u4", "name": "Marcus Webb",  "email": "marcus@meridian.io", "role": "viewer", "department": "Sales",
+    "title": "Head of Sales", "initials": "MW", "color": "bg-amber-100 text-amber-700",
+    "lastActive": "2025-04-03",
+    "dashboardsViewed": 14, "reportsRun": 6, "alertsTriggered": 0,
+    "activity": [
+      { "action": "Viewed Sales Pipeline Summary",  "time": "Yesterday, 10:00am" },
+      { "action": "Viewed segment breakdown",       "time": "Wed, 4:22pm" }
+    ]
+  },
+  {
+    "id": "u5", "name": "Lena Fischer", "email": "lena@meridian.io",   "role": "viewer", "department": "Engineering",
+    "title": "Engineering Lead", "initials": "LF", "color": "bg-rose-100 text-rose-700",
+    "lastActive": "2025-03-29",
+    "dashboardsViewed": 7, "reportsRun": 1, "alertsTriggered": 0,
+    "activity": [
+      { "action": "Viewed Executive Overview", "time": "Sat, 11:30am" }
+    ]
+  },
+  {
+    "id": "u6", "name": "Tom Reyes",    "email": "tom@meridian.io",    "role": "viewer", "department": "Marketing",
+    "title": "Head of Marketing", "initials": "TR", "color": "bg-teal-100 text-teal-700",
+    "lastActive": "2025-03-28",
+    "dashboardsViewed": 9, "reportsRun": 2, "alertsTriggered": 0,
+    "activity": [
+      { "action": "Viewed Executive Overview",   "time": "Fri, 9:15am" },
+      { "action": "Viewed Monthly Business Review", "time": "Tue, 2:00pm" }
+    ]
+  }
 ]

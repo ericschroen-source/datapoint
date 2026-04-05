@@ -8,23 +8,71 @@
     "arpu":        { "label": "ARPU",         "value": 38.50,   "prev": 37.05,   "format": "currency", "trend": "up" }
   },
   "monthly": [
-    { "month": "Apr '24", "mrr": 89200,  "newMrr": 6100, "churnedMrr": 1800, "users": 2501 },
-    { "month": "May '24", "mrr": 93500,  "newMrr": 6400, "churnedMrr": 2100, "users": 2598 },
-    { "month": "Jun '24", "mrr": 97800,  "newMrr": 6200, "churnedMrr": 1900, "users": 2701 },
-    { "month": "Jul '24", "mrr": 101200, "newMrr": 5800, "churnedMrr": 2400, "users": 2789 },
-    { "month": "Aug '24", "mrr": 104900, "newMrr": 6300, "churnedMrr": 1600, "users": 2880 },
-    { "month": "Sep '24", "mrr": 108400, "newMrr": 6100, "churnedMrr": 2600, "users": 2954 },
-    { "month": "Oct '24", "mrr": 111200, "newMrr": 5900, "churnedMrr": 3100, "users": 3002 },
-    { "month": "Nov '24", "mrr": 113800, "newMrr": 7200, "churnedMrr": 4600, "users": 3041 },
-    { "month": "Dec '24", "mrr": 116500, "newMrr": 8400, "churnedMrr": 5700, "users": 3089 },
-    { "month": "Jan '25", "mrr": 118900, "newMrr": 7100, "churnedMrr": 4700, "users": 3124 },
-    { "month": "Feb '25", "mrr": 121600, "newMrr": 6800, "churnedMrr": 4100, "users": 3182 },
-    { "month": "Mar '25", "mrr": 124800, "newMrr": 8200, "churnedMrr": 5000, "users": 3241 }
+    { "month": "Apr '24", "mrr": 89200,  "newMrr": 6100, "expansion": 1200, "contraction": 800,  "churnedMrr": 1800, "users": 2501 },
+    { "month": "May '24", "mrr": 93500,  "newMrr": 6400, "expansion": 1400, "contraction": 900,  "churnedMrr": 2100, "users": 2598 },
+    { "month": "Jun '24", "mrr": 97800,  "newMrr": 6200, "expansion": 1600, "contraction": 700,  "churnedMrr": 1900, "users": 2701 },
+    { "month": "Jul '24", "mrr": 101200, "newMrr": 5800, "expansion": 1800, "contraction": 1000, "churnedMrr": 2400, "users": 2789 },
+    { "month": "Aug '24", "mrr": 104900, "newMrr": 6300, "expansion": 2100, "contraction": 800,  "churnedMrr": 1600, "users": 2880 },
+    { "month": "Sep '24", "mrr": 108400, "newMrr": 6100, "expansion": 2400, "contraction": 900,  "churnedMrr": 2600, "users": 2954 },
+    { "month": "Oct '24", "mrr": 111200, "newMrr": 5900, "expansion": 2600, "contraction": 1100, "churnedMrr": 3100, "users": 3002 },
+    { "month": "Nov '24", "mrr": 113800, "newMrr": 7200, "expansion": 2800, "contraction": 1400, "churnedMrr": 4600, "users": 3041 },
+    { "month": "Dec '24", "mrr": 116500, "newMrr": 8400, "expansion": 3000, "contraction": 1600, "churnedMrr": 5700, "users": 3089 },
+    { "month": "Jan '25", "mrr": 118900, "newMrr": 7100, "expansion": 2900, "contraction": 1500, "churnedMrr": 4700, "users": 3124 },
+    { "month": "Feb '25", "mrr": 121600, "newMrr": 6800, "expansion": 3100, "contraction": 1700, "churnedMrr": 4100, "users": 3182 },
+    { "month": "Mar '25", "mrr": 124800, "newMrr": 8200, "expansion": 3100, "contraction": 1800, "churnedMrr": 6300, "users": 3241 }
   ],
+  "waterfall": [
+    { "label": "Starting MRR", "value": 121600, "type": "start" },
+    { "label": "New MRR",      "value": 8200,   "type": "positive" },
+    { "label": "Expansion",    "value": 3100,   "type": "positive" },
+    { "label": "Contraction",  "value": -1800,  "type": "negative" },
+    { "label": "Churned",      "value": -6300,  "type": "negative" },
+    { "label": "Ending MRR",   "value": 124800, "type": "end" }
+  ],
+  "segments": [
+    { "name": "Enterprise",  "customers": 18,  "mrr": 68400,  "arpu": 3800, "churn": 0.6, "nrr": 128, "color": "#6366f1" },
+    { "name": "Mid-Market",  "customers": 47,  "mrr": 38600,  "arpu": 821,  "churn": 1.4, "nrr": 119, "color": "#8b5cf6" },
+    { "name": "SMB",         "customers": 127, "mrr": 17800,  "arpu": 140,  "churn": 3.8, "nrr": 104, "color": "#a78bfa" }
+  ],
+  "retention": {
+    "cohorts": [
+      { "cohort": "Oct '24", "m0": 100, "m1": 94, "m2": 91, "m3": 89, "m4": 87, "m5": 86 },
+      { "cohort": "Nov '24", "m0": 100, "m1": 95, "m2": 92, "m3": 90, "m4": 88 },
+      { "cohort": "Dec '24", "m0": 100, "m1": 96, "m2": 93, "m3": 91 },
+      { "cohort": "Jan '25", "m0": 100, "m1": 95, "m2": 92 },
+      { "cohort": "Feb '25", "m0": 100, "m1": 96 },
+      { "cohort": "Mar '25", "m0": 100 }
+    ],
+    "average": [
+      { "month": "M0", "rate": 100 },
+      { "month": "M1", "rate": 95.2 },
+      { "month": "M2", "rate": 92.0 },
+      { "month": "M3", "rate": 90.0 },
+      { "month": "M4", "rate": 87.5 },
+      { "month": "M5", "rate": 86.0 }
+    ]
+  },
+  "product": {
+    "dau": 487,
+    "dauPrev": 431,
+    "mau": 3241,
+    "mauPrev": 3002,
+    "stickiness": 15.0,
+    "stickinessPrev": 14.4,
+    "avgSession": 8.3,
+    "avgSessionPrev": 9.6,
+    "featureAdoption": [
+      { "feature": "Dashboards",   "adoption": 94 },
+      { "feature": "Integrations", "adoption": 78 },
+      { "feature": "Alerts",       "adoption": 67 },
+      { "feature": "Reports",      "adoption": 42 },
+      { "feature": "API",          "adoption": 31 }
+    ]
+  },
   "alerts": [
-    { "id": "a1", "type": "milestone", "message": "MRR crossed $120k for the first time",         "date": "2025-02-14", "read": false },
+    { "id": "a1", "type": "milestone", "message": "MRR crossed $120k for the first time",              "date": "2025-02-14", "read": false },
     { "id": "a2", "type": "positive",  "message": "Churn rate dropped below 2% — lowest in 18 months", "date": "2025-03-01", "read": false },
-    { "id": "a3", "type": "info",      "message": "3 enterprise accounts expanded this quarter",  "date": "2025-03-18", "read": true },
-    { "id": "a4", "type": "warning",   "message": "Avg session length down 14% vs last month",   "date": "2025-03-28", "read": true }
+    { "id": "a3", "type": "info",      "message": "3 enterprise accounts expanded this quarter",        "date": "2025-03-18", "read": true },
+    { "id": "a4", "type": "warning",   "message": "Avg session length down 14% vs last month",          "date": "2025-03-28", "read": true }
   ]
 }

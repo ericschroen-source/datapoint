@@ -1,0 +1,93 @@
+[
+  {
+    "id": "r1",
+    "name": "Q1 Board Report",
+    "type": "board",
+    "status": "scheduled",
+    "description": "Quarterly business review for board of directors. Covers MRR, ARR, churn, NRR, and key initiatives.",
+    "recipients": ["sarah@meridian.io", "james@meridian.io", "board@meridian.io"],
+    "lastSent": "2024-12-31",
+    "nextRun": "2025-06-30",
+    "cadence": "Quarterly",
+    "owner": "u1",
+    "sections": ["Revenue", "Growth", "Retention", "Product", "Outlook"]
+  },
+  {
+    "id": "r2",
+    "name": "Monthly Business Review",
+    "type": "mbr",
+    "status": "sent",
+    "description": "Internal MBR sent to all department heads on the first Monday of each month.",
+    "recipients": ["sarah@meridian.io", "james@meridian.io", "priya@meridian.io", "marcus@meridian.io"],
+    "lastSent": "2025-04-01",
+    "nextRun": "2025-05-05",
+    "cadence": "Monthly",
+    "owner": "u1",
+    "sections": ["MRR Movement", "Churn", "Pipeline", "Product", "Team"]
+  },
+  {
+    "id": "r3",
+    "name": "Investor Update — March",
+    "type": "investor",
+    "status": "sent",
+    "description": "Monthly update sent to seed and Series A investors with key metrics and narrative.",
+    "recipients": ["investors@sequoia.com", "partner@accel.com"],
+    "lastSent": "2025-04-02",
+    "nextRun": "2025-05-02",
+    "cadence": "Monthly",
+    "owner": "u1",
+    "sections": ["Highlights", "Metrics", "Lowlights", "Ask"]
+  },
+  {
+    "id": "r4",
+    "name": "Revenue Deep Dive",
+    "type": "finance",
+    "status": "scheduled",
+    "description": "Weekly finance report covering MRR waterfall, segment performance, and top expansions and churns.",
+    "recipients": ["james@meridian.io", "sarah@meridian.io"],
+    "lastSent": "2025-03-28",
+    "nextRun": "2025-04-07",
+    "cadence": "Weekly",
+    "owner": "u2",
+    "sections": ["Waterfall", "Segments", "Top Accounts", "At-Risk"]
+  },
+  {
+    "id": "r5",
+    "name": "Product Health Report",
+    "type": "product",
+    "status": "draft",
+    "description": "Bi-weekly product metrics including DAU, MAU, feature adoption, and session quality.",
+    "recipients": ["priya@meridian.io", "sarah@meridian.io"],
+    "lastSent": "2025-03-17",
+    "nextRun": null,
+    "cadence": "Bi-weekly",
+    "owner": "u3",
+    "sections": ["Usage", "Adoption", "Retention", "NPS"]
+  },
+  {
+    "id": "r6",
+    "name": "Sales Pipeline Summary",
+    "type": "sales",
+    "status": "scheduled",
+    "description": "Weekly pipeline report for the sales team showing open deals, stage velocity, and forecast.",
+    "recipients": ["marcus@meridian.io", "sarah@meridian.io"],
+    "lastSent": "2025-03-31",
+    "nextRun": "2025-04-07",
+    "cadence": "Weekly",
+    "owner": "u4",
+    "sections": ["Pipeline", "New Deals", "Closed Won", "Forecast"]
+  },
+  {
+    "id": "r7",
+    "name": "Executive Digest",
+    "type": "digest",
+    "status": "sent",
+    "description": "Daily one-page summary of the top 5 metrics, delivered every morning at 8am.",
+    "recipients": ["sarah@meridian.io"],
+    "lastSent": "2025-04-04",
+    "nextRun": "2025-04-05",
+    "cadence": "Daily",
+    "owner": "u1",
+    "sections": ["MRR", "Churn", "DAU", "Alerts", "Top Account Activity"]
+  }
+]
